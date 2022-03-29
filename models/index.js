@@ -2,7 +2,6 @@
 const Post = require('./Post');
 const User = require('./User');
 
-
 // create associations
 User.hasMany(Post, {
   foreignKey: 'user_id'
@@ -13,5 +12,4 @@ Post.belongsTo(User, {
   onDelete: 'SET NULL'
 });
 
-module.exports = { User, Post
-}
+module.exports = { User, Post};
