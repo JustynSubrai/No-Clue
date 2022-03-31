@@ -15,11 +15,8 @@ Item.init(
     name: {
       type: DataTypes.STRING
     },
-    seller: {
-      type: DataTypes.STRING
-    },
     price: {
-      type: DataTypes.INTEGER
+      type: DataTypes.DECIMAL
     },
     description: {
       type: DataTypes.STRING
