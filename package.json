@@ -1,5 +1,5 @@
 {
-  "name": "No-Clue",
+  "name": "Swindle-Shop",
   "version": "1.0.0",
   "description": "project tbd",
   "main": "server.js",
@@ -20,7 +20,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "develop": "nodemon server.js"
+    "develop": "nodemon server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",

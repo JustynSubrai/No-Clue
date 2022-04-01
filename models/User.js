@@ -1,17 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-console.log(sequelize);
 
 class User extends Model { }
 
 User.init(
     {
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true
-        },
         username: {
             type: DataTypes.STRING,
             allowNull: false
@@ -35,10 +28,6 @@ User.init(
     {
         sequelize,
         timestamps: false,
-        // Prevent sequelize from renaming the table
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'User'
     }
 )
 

@@ -3,13 +3,8 @@ const Item = require('./Item');
 const User = require('./User');
 
 // create associations
-User.hasMany(Item, {
-  foreignKey: 'user_id'
-});
+User.hasMany(Item);
 
-Item.belongsTo(User, {
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
-});
+Item.belongsTo(User);
 
-module.exports = { User, Item};
+module.exports = { User, Item };
