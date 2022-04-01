@@ -14,7 +14,9 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
+
   User.findOne({
+
     attributes: { exclude: ['password'] },
     where: {
       id: req.params.id
@@ -23,6 +25,8 @@ router.get('/:id', (req, res) => {
         model: Item,
         attributes: ['id', 'name']
       },
+
+
   })
     .then(dbUserData => {
       if (!dbUserData) {
@@ -35,9 +39,11 @@ router.get('/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+    console.log('---------Helloooooo---------')
 });
 
 router.post('/', (req, res) => {
+  console.log('---------Post 2 Working--------')
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,
@@ -49,7 +55,7 @@ router.post('/', (req, res) => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
         req.session.loggedIn = true;
-  
+
         res.json(dbUserData);
       });
     })
@@ -82,13 +88,14 @@ router.post('/', (req, res) => {
 //       req.session.user_id = dbUserData.id;
 //       req.session.username = dbUserData.username;
 //       req.session.loggedIn = true;
-  
+
 //       res.json({ user: dbUserData, message: 'You are now logged in!' });
 //     });
 //   });
 // });
 
 router.post('/logout', (req, res) => {
+  console.log('---------Post 3 Working--------')
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();

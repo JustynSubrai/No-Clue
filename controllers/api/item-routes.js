@@ -48,6 +48,7 @@ router.get('/:name', (req, res) => {
 });
 
 router.post('/', withAuth, (req, res) => {
+  console.log('---------Post Working--------')
   Item.create({
     name: req.body.name,
     item_id: req.body.item_id,

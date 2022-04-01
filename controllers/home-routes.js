@@ -64,6 +64,7 @@ router.get('/', (req, res) => {
 // });
 
 router.get('/login', (req, res) => {
+  console.log('========hellOOOOO========');
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
