@@ -20,6 +20,7 @@ async function loginFormHandler(event) {
       alert(response.statusText);
     }
   }
+  console.log('=======login working=========')
 }
 
 async function signupFormHandler(event) {
