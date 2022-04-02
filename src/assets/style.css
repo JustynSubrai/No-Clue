@@ -1,0 +1,12 @@
+.logo {
+    display: flex;
+    position: relative;
+    bottom: 6vh;
+}
+
+.search {
+    position: relative;
+    bottom: 5vh;
+    width: 95%;
+}
+

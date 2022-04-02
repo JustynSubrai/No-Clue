@@ -1,15 +1,10 @@
 // import all models
-const Post = require('./Post');
+const Item = require('./Item');
 const User = require('./User');
 
 // create associations
-User.hasMany(Post, {
-  foreignKey: 'user_id'
-});
+User.hasMany(Item);
 
-Post.belongsTo(User, {
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
-});
+Item.belongsTo(User);
 
-module.exports = { User, Post};
+module.exports = { User, Item };
