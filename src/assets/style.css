@@ -1,0 +1,18 @@
+.logo {
+    display: flex;
+    position: relative;
+    bottom: 6vh;
+}
+
+.nav-item {
+    display: flex;
+    position:relative;
+    bottom: 18vh;
+}
+
+.search {
+    position: relative;
+    bottom: 5vh;
+    width: 95%;
+}
+
