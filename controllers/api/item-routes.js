@@ -5,15 +5,15 @@ const withAuth = require('../../utils/auth');
 
 // get all users
 router.get('/', (req, res) => {
-  console.log('==========HELLO============');
+  console.log('==========HELLO items============');
   Item.findAll({
 
-    // include: [
-    //   {
-    //     model: User,
-    //     attributes: ['username']
-    //   }
-    // ]
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {

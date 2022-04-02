@@ -9,7 +9,7 @@ async function logout() {
   } else {
     alert(response.statusText);
   }
-  console.log('working')
+console.log('========WORKINGGGGGG==========')
 }
 
 document.querySelector('#logout').addEventListener('click', logout);

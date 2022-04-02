@@ -4,7 +4,24 @@ const { Item, User} = require('../models');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
-  console.log('======================');
+  console.log('=========happy shopping=============');
+  Item.findAll({
+    include: [
+      {
+          model: User,
+          attributes: ['username']
+      }
+    ]
+  })
+  .then(dbPostData => res.json(dbPostData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+router.get('/homepage', (req, res) => {
+  console.log('==========im logged in============');
   Item.findAll({
     include: [
       {
@@ -26,7 +43,6 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-
 // get single post
 // router.get('/post/:id', (req, res) => {
 //   Item.findOne({
@@ -64,7 +80,7 @@ router.get('/', (req, res) => {
 // });
 
 router.get('/login', (req, res) => {
-  console.log('========hellOOOOO========');
+  console.log('========please login========');
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
