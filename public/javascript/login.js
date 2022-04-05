@@ -1,4 +1,5 @@
 async function loginFormHandler(event) {
+  alert('=======test======')
   event.preventDefault();
 
   const email = document.querySelector('#email-login').value.trim();
@@ -15,11 +16,12 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard/');
+      document.location.replace('/homepage/');
     } else {
       alert(response.statusText);
     }
   }
+  console.log('=======login working=========')
 }
 
 async function signupFormHandler(event) {
@@ -41,11 +43,12 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard/');
+      document.location.replace('/homepage/');
     } else {
       alert(response.statusText);
     }
   }
+  console.log('=======signup working=========')
 }
 
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);

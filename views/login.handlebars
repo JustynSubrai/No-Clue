@@ -1,33 +1,59 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
+ <header>
+    <nav class=".navbar jumbotron jumbotron-fluid bg-dark justify-content-center" style="height: 230px">
+      <div class="ml-3">
+        <a class='text-decoration-none' href="/">
+          <img src="https://www.clipartqueen.com/image-files/halloween-clip-art-black-cat-silhouette.png" width="85"
+            height="85" class="d-inline align-top" alt="">
+        </a>
+        <h1 class=" d-inline">
+          <a href="/" class="font-weight-lighter text-muted text-decoration-none">Swindle Shop</a>
+        </h1>
+      </div>
+      <div>
 
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
+      </div>
+    </nav>
+  </header>
 
-<script src="/javascript/login.js"></script>
+  <main class="container">
+    <div class="row d-flex justify-content-around">
+      <div class="bg-success col-5 shadow p-3  bg-dark rounded">
+        <h2 class="mb-5 font-weight-light text-muted">Log In</h2>
+        <form class="login-form">
+          <div class="form-group ">
+            <input type="email" class="form-control btn-outline-success my-2 my-sm-0 bg-dark" id="email-login"
+              placeholder="Email or Username">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control btn-outline-success my-2 my-sm-0 bg-dark" id="password-login"
+              placeholder="Password">
+          </div>
+          <div class="form-group form-check mb-5">
+            <input type="checkbox" class="form-check-input " id="rememberMe">
+            <label class="form-check-label text-muted" for="rememberMe">Remember Me</label>
+          </div>
+          <button type="submit" class="btn btn-outline-success my-2 my-sm-0 mr-5">Log In</button>
+        </form>
+      </div>
+      <div class="bg-danger col-5 shadow p-3 mb-5 bg-dark rounded">
+        <h2 class="mb-5 font-weight-light text-muted">Sign Up</h2>
+        <form class="signup-form">
+          <div class="form-group ">
+            <input type="email" class="form-control btn-outline-success my-2 my-sm-0 bg-dark" id="email-signup"
+              placeholder="Enter Email">
+          </div>
+          <div class="form-group">
+            <input type="username" class="form-control btn-outline-success my-2 my-sm-0 bg-dark" id="username-signup"
+              placeholder="Enter Username">
+          </div>
+          <div class="form-group mb-5">
+            <input type="password" class="form-control btn-outline-success my-2 my-sm-0 bg-dark" id="password-signup"
+              placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-outline-success my-2 my-sm-0 mr-5">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="/javascript/login.js"></script>
