@@ -1,4 +1,5 @@
 async function loginFormHandler(event) {
+  alert('=======test======')
   event.preventDefault();
 
   const email = document.querySelector('#email-login').value.trim();
