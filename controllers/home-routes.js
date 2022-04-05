@@ -58,6 +58,7 @@ router.get('/post', (req, res) => {
   console.log('==========post working============');
       if (req.session.loggedIn) {
         res.render('post');
+        return;
       }
   });
 

@@ -97,6 +97,7 @@ router.post('/login', (req, res) => {
       res.json({ user: dbUserData, message: 'You are now logged in!' });
     });
   });
+
 });
 
 router.post('/logout', (req, res) => {
