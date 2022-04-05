@@ -63,6 +63,11 @@ router.post('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+
+    if (req.session.loggedIn) {
+      res.redirect('/homepage');
+      return;
+    }
 });
 
 router.post('/login', (req, res) => {
