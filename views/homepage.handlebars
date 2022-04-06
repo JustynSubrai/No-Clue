@@ -14,7 +14,11 @@
 
                 {{#unless loggedIn}}
                 <button id='loginbtn' class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Login</button>
+
+                <script src="/javascript/loginbtn.js"></script>
                 {{/unless}}
+
+                {{#if loggedIn}}
                 <button id="itemCreate" class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Post</button>
                 <button id="logout" class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Logout</button>
                 {{/if}}
@@ -23,15 +27,12 @@
 
 
         <div id='searchbar' class="d-flex justify-content-center">
-<<<<<<< HEAD
-=======
             <input class="search btn btn-outline-success my-2 my-sm-0" type="search" placeholder="Find your loot">
             <div class="autocom-box">
 
             </div>
             <a href="" target="_blank" hidden></a>
             <div class="icon"><i class="fas fa-search"></i></div>
->>>>>>> 73fbf8c7aa488bbdfb13bd8c71399ead40b4cb43
         </div>
 
     </section>
