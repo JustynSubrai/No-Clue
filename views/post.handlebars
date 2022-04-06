@@ -1,4 +1,3 @@
-
 <body>
     <header>
         <nav class=".navbar jumbotron jumbotron-fluid bg-dark justify-content-center" style="height: 230px">
@@ -18,25 +17,28 @@
             <h2 class="mb-5 font-weight-light text-muted">Post Item</h2>
             <form class="signup-form">
                 <div class="form-group ">
-                    <input id='name-input' type="name" class="form-control btn-outline-success my-2 my-sm-0 bg-dark" id="item-name"
+                    <input id="name-input" type="name" class="form-control btn-outline-success my-2 my-sm-0 bg-dark"
                         placeholder="Enter Item Name">
                 </div>
                 <div class="form-group">
-                    <input id='price-input' type="price" class="form-control btn-outline-success my-2 my-sm-0 bg-dark" id="item-price"
+                    <input id="price-input" type="integer" class="form-control btn-outline-success my-2 my-sm-0 bg-dark"
                         placeholder="Enter Item Price In USD">
                 </div>
                 <div class="form-group mb-5">
-                    <textarea id='info-input' type="description" class="form-control btn-outline-success my-2 my-sm-0 bg-dark"
-                        id="item-description" placeholder="Enter Item Description" rows="4"></textarea>
+                    <textarea id='info-input' type="text"
+                        class="form-control btn-outline-success my-2 my-sm-0 bg-dark"
+                        placeholder="Enter Item Description" rows="4"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="item-image" class="font-weight-light text-muted">Add Image</label>
-                    <input id='img-input' type="file" class="form-control-file font-weight-light text-muted mb-5" id="item-image" >
+                    <input id='img-input' type="file" class="form-control-file font-weight-light text-muted mb-5"
+                        id="item-image">
                 </div>
-                <button id="post-item" type="submit" class="btn btn-outline-success my-2 my-sm-0 mr-5">Post Item</button>
+                <button id="post-item" type="submit" class="btn btn-outline-success my-2 my-sm-0 mr-5">Post
+                    Item</button>
             </form>
         </div>
     </main>
 </body>
 
- <script src="/javascript/post.js"></script>
+<script src="/javascript/post.js"></script>
