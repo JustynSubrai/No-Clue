@@ -62,7 +62,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/post', (req, res) => {
-  console.log('==========post working============');
+  console.log('==========post route working============');
       if (req.session.loggedIn) {
         res.render('post');
         return;
