@@ -1,47 +1,51 @@
-   <header>
-        <section class="jumbotron jumbotron-fluid bg-dark" style="height: 230px;">
+<header>
+    <section class="jumbotron jumbotron-fluid bg-dark" style="height: 230px;">
 
 
-            <div class="ml-4 mt-3 mr-3 logo justify-content-between">
-                <section>
-                    <img class="d-inline"
-                        src="https://www.clipartqueen.com/image-files/halloween-clip-art-black-cat-silhouette.png"
-                        alt="black cat logo" width="85" height="85">
-                    <h1 class="font-weight-light text-muted d-inline ">Swindle Shop</h1>
-                </section>
+        <div class="ml-4 mt-3 mr-3 logo justify-content-between">
+            <section>
+                <img class="d-inline"
+                    src="https://www.clipartqueen.com/image-files/halloween-clip-art-black-cat-silhouette.png"
+                    alt="black cat logo" width="85" height="85">
+                <h1 class="font-weight-light text-muted d-inline ">Swindle Shop</h1>
+            </section>
 
-                <nav class=".navbar " role="navigation" aria-label="main navigation">
+            <nav class=".navbar " role="navigation" aria-label="main navigation">
 
-                    <button id='login-btn' class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Login</button>
-                </nav>
+                <button id='login-btn' class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Login</button>
+                {{#if loggedIn}}
+                <button id="itemCreate" class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Post</button>
+                <button id="logout" class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Logout</button>
+                {{/if}}
+            </nav>
+        </div>
+
+
+        <div class="d-flex justify-content-center">
+            <input class="search btn btn-outline-success my-2 my-sm-0" type="search" placeholder="Find your loot">
+        </div>
+
+    </section>
+</header>
+
+<main>
+    <section class=" row align-items-start justify-content-around">
+        <div id='item-card' class="card col-2.5 m-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title" id="item-name">{{name}}</h5>
+                <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
             </div>
 
-
-            <div class="d-flex justify-content-center">
-                <input class="search btn btn-outline-success my-2 my-sm-0" type="search" placeholder="Find your loot">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="item-price">{{price}}</li>
+                <li class="list-group-item" id="item-description">{{description}}</li>
+            </ul>
+            <div class="card-body">
+                <div class="card-link" id="item-username">{{username}}</div>
             </div>
-
-        </section>
-    </header>
-
-    <main>
-        <section class=" row align-items-start justify-content-around">
-            <div id='item-card' class="card col-2.5 m-3" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title" id="item-name">{{name}}</h5>
-                    <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
-                </div>
-
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id="item-price">{{price}}</li>
-                    <li class="list-group-item" id="item-description">{{description}}</li>
-                </ul>
-                <div class="card-body">
-                    <div class="card-link" id="item-username">{{username}}</div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
 
 <script src="/javascript/search.js"></script>
- <script src="/javascript/home.js"></script>
+<script src="/javascript/home.js"></script>
