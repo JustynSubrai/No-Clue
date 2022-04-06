@@ -12,8 +12,9 @@
 
             <nav class=".navbar " role="navigation" aria-label="main navigation">
 
+                {{#unless loggedIn}}
                 <button id='loginbtn' class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Login</button>
-                {{#if loggedIn}}
+                {{/unless}}
                 <button id="itemCreate" class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Post</button>
                 <button id="logout" class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Logout</button>
                 {{/if}}
@@ -22,7 +23,7 @@
 
 
         <div class="d-flex justify-content-center">
-            <input class="search btn btn-outline-success my-2 my-sm-0" type="search" placeholder="Find your loot">
+            <input id="searchbar" class="search btn btn-outline-success my-2 my-sm-0" type="search" placeholder="Find your loot">
         </div>
 
     </section>

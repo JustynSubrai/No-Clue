@@ -6,8 +6,7 @@ let infoEl = document.getElementById('info-input').value;
 let imgEl = document.getElementById('img-input').value;
 // let userEl = document.getElementById('username').value;
 let cardEl = Handlebars.compile(source);
-
-
+``
 async function post(event) {
     console.log('post btn working')
     event.preventDefault();
