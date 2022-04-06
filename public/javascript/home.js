@@ -18,16 +18,8 @@ async function createCardHandler(event) {
 
 
 async function login() {
-    const response = await fetch('/api/users/login', {
-        method: 'post',
-        headers: { 'Content-Type': 'application/json' }
-    });
-    
-    if (response.ok) {
-        document.location.replace('/login');
-    } else {
-        alert(response.statusText);
-    }
+
+    document.location.replace('/login');
     console.log('========loginbtn WORKINGGGGGG==========')
 }
 
