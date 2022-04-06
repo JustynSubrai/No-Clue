@@ -11,8 +11,6 @@
             </section>
 
             <nav class=".navbar " role="navigation" aria-label="main navigation">
-
-                <button id='loginbtn' class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Login</button>
                 {{#if loggedIn}}
                 <button id="itemCreate" class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Post</button>
                 <button id="logout" class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Logout</button>
@@ -21,8 +19,7 @@
         </div>
 
 
-        <div class="d-flex justify-content-center">
-            <input class="search btn btn-outline-success my-2 my-sm-0" type="search" placeholder="Find your loot">
+        <div id='searchbar' class="d-flex justify-content-center">
         </div>
 
     </section>
@@ -34,5 +31,6 @@
 </main>
 </script>
 
-{{!-- <script src="/javascript/search.js"></script> --}}
+
+<script src="/javascript/search.js"></script>
 <script src="/javascript/home.js"></script>
