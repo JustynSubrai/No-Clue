@@ -1,7 +1,6 @@
 let nameEl = document.getElementById('name-input').value;
 let priceEl = document.getElementById('price-input').value;
 let infoEl = document.getElementById('info-input').value;
-
 async function post(event) {
     event.preventDefault();
     let data = {
