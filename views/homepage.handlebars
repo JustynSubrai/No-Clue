@@ -1,7 +1,48 @@
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
-    {{> post-info post }}
-  </li>
-  {{/each}}
-</ol>
+<header>
+    <section class="jumbotron jumbotron-fluid bg-dark" style="height: 230px;">
+
+
+        <div class="ml-4 mt-3 mr-3 logo justify-content-between">
+            <section>
+                <img class="d-inline"
+                    src="https://www.clipartqueen.com/image-files/halloween-clip-art-black-cat-silhouette.png"
+                    alt="black cat logo" width="85" height="85">
+                <h1 class="font-weight-light text-muted d-inline ">Swindle Shop</h1>
+            </section>
+
+            <nav class=".navbar " role="navigation" aria-label="main navigation">
+
+                {{#unless loggedIn}}
+                <button id='loginbtn' class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Login</button>
+
+                <script src="/javascript/loginbtn.js"></script>
+                {{/unless}}
+
+                {{#if loggedIn}}
+                <button id="itemCreate" class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Post</button>
+                <button id="logout" class="nav-item btn btn-outline-success my-2 my-sm-0 mr-5">Logout</button>
+                {{/if}}
+            </nav>
+        </div>
+
+
+        <div id='searchbar' class="d-flex justify-content-center">
+            <input class="search btn btn-outline-success my-2 my-sm-0" type="search" placeholder="Find your loot">
+            <div class="autocom-box">
+
+            </div>
+            <a href="" target="_blank" hidden></a>
+        </div>
+
+    </section>
+</header>
+<script type="text/x-handlebars-template" id="template">
+<main>
+    <section id='card-section' class="row align-items-start justify-content-around">
+    </section>
+</main>
+</script>
+
+
+<script src="/javascript/search.js"></script>
+<script src="/javascript/postbtn.js"></script>

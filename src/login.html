@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' >
+    <title>Document</title>
+</head>
+<body>
+    <header >
+        <nav class=".navbar jumbotron jumbotron-fluid bg-dark justify-content-center" style="height: 230px">
+            <div class="ml-3">
+              <img src="https://www.clipartqueen.com/image-files/halloween-clip-art-black-cat-silhouette.png" width="85" height="85" class="d-inline align-top" alt="">
+              <a  href="/" class="font-weight-lighter text-muted d-inline">Swindle Shop</a>
+
+              {{#if loggedIn}}
+              <a href="/homepage">Homepage</a>
+              <button id="logout" class="btn-no-style">logout</button>
+              {{else}}
+              <a href="/login">login</a>
+              {{/if}}
+              
+            </div>
+            <div>
+                
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="row d-flex justify-content-around">
+            <div class="bg-success col-5 shadow p-3  bg-white rounded">
+                <h2 class="mb-5 font-weight-light text-muted">Log In</h2>
+                <form>
+                    <div class="form-group">
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Email or Username">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                    <div class="form-group form-check mb-5">
+                      <input type="checkbox" class="form-check-input" id="rememberMe">
+                      <label class="form-check-label" for="rememberMe">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                </form>
+            </div>
+            <div class="bg-danger col-5 shadow p-3 mb-5 bg-white rounded">
+                <h2 class="mb-5">Sign Up</h2>
+                <form>
+                    <div class="form-group">
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="username" class="form-control" id="inputUsername" placeholder="Enter Username">
+                      </div>
+                    <div class="form-group mb-5">
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div> 
+    </main>
+
+    <footer>
+
+    </footer>
+
+    {{#if loggedIn}}
+    <script src="../../public/javascript/logout.js"></script>
+    {{/if}}
+</body>
+</html>
