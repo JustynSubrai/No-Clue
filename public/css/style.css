@@ -10,3 +10,9 @@
     width: 95%;
 }
 
+#item-card {
+    max-height: 310px;
+    max-width: 310px;
+    min-height: 210px;
+    min-width: 210px;
+}

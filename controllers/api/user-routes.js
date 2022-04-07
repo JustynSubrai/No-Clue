@@ -63,6 +63,11 @@ router.post('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+
+    if (req.session.loggedIn) {
+      res.redirect('/homepage');
+      return;
+    }
 });
 
 router.post('/login', (req, res) => {
@@ -92,6 +97,7 @@ router.post('/login', (req, res) => {
       res.json({ user: dbUserData, message: 'You are now logged in!' });
     });
   });
+
 });
 
 router.post('/logout', (req, res) => {
