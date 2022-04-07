@@ -33,7 +33,7 @@ async function post(event) {
         <div id='item-card' class="card col-2.5 m-3" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title" id="item-name">${nameEl}</h5>
-            <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+            <img id="uploaded-image" class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
         </div>
         
         <ul class="list-group list-group-flush">
