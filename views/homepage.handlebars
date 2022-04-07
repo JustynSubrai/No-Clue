@@ -39,16 +39,20 @@
   <section class=" d-flex flex-wrap row align-items-start justify-content-start text-secondary p-2">
     {{#each posts}}
 
-    <div id='item-card' class='card col-2.5 m-3 bg-dark flex-md-grow-1' style='width: 18rem;'>
+    <div id='item-card' class='card col-2.5 m-3 bg-dark flex-md-grow-1 border-success text-center bg-image hover-zoom' style='width: 18rem;'>
       <div class='card-body'>
-        <h5 class='card-title font-weight-normal' id='item-name'> {{name}}</h5>
-        <img class='card-img-top' src='.../100px180/?text=Image cap' alt='Card image cap'>
+        <div >
+          <h5 class='card-title font-weight-normal' id='item-name'> {{name}}</h5>
+        </div>
       </div>
+        <div>
+          <img class='card-img-top p-2' src='.../100px180/?text=Image cap' alt='Card image cap'>
+        </div>
 
-      <ul class='list-group list-group-flush p-2'>
-        <li class='list-group-item bg-dark' id='item-price'>{{price}}</li>
-        <li class='list-group-item bg-dark' id='item-description'>{{description}}</li>
-      </ul>
+      <div class='list-group list-group-flush p-0 border-rounded-0 card-body'>
+        <div class='list-group-item bg-dark card border-success border-bottom-0' id='item-price'>{{price}}</div>
+        <div class='list-group-item bg-dark border border-success border-bottom-0 border-left-0 border-right-0' id='item-description'>{{description}}</div>
+      </div>
     </div>
 
     {{/each}}
