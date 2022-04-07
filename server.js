@@ -41,7 +41,7 @@ cloudinary.config({
   api_secret: process.env.cloudinary_secret 
 });
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
 

@@ -51,8 +51,9 @@ router.post('/', withAuth, (req, res) => {
   console.log('---------Post Working--------')
   Item.create({
     name: req.body.name,
-    item_id: req.body.item_id,
-    user_id: req.session.user_id
+    price: req.body.price,
+    description: req.body.description,
+    UserId: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
