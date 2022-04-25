@@ -2,7 +2,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Item extends Model {}
+class Item extends Model { }
 
 Item.init(
   {
@@ -14,6 +14,9 @@ Item.init(
       type: DataTypes.DECIMAL
     },
     description: {
+      type: DataTypes.STRING
+    },
+    secure_url: {
       type: DataTypes.STRING
     }
   },

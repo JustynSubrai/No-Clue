@@ -8,6 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const sequelize = require("./config/connection");
+const { format } = require('path');
+const res = require('express/lib/response');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
@@ -41,7 +43,7 @@ cloudinary.config({
   api_secret: process.env.cloudinary_secret 
 });
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
 
